@@ -1,0 +1,2 @@
+# EPT-PRJ-TX-Line-Design
+## A MATLAB GUI-based program for designing power transmission lines. Created as a project for EE-352 Electrical Power Transmission as part of the BE-Electrical Engineering program at NEDUET.
