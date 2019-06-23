@@ -8,7 +8,7 @@ body {
 
 /*CAROUSEL STYLES*/
 .carousel-item img {
-	height: 92vh;
+	height: 85vh;
 	display: flex;
     opacity: 0.5;
  }
