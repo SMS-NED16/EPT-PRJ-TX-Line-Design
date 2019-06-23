@@ -49,3 +49,12 @@ body {
         line-height: 1.0;
     }
 }
+
+footer {
+    color: #FFF; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    align-items: center;
+}
