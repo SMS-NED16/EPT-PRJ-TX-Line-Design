@@ -17,6 +17,18 @@ body {
 	justify-content: center;
 	color: #000;
 	height: 90vh;
+    position: absolute;
+    top: 2em;
+    opacity: 0;
+
+    animation: fadeIn 1s 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    100% {
+        top: -2em;
+        opacity: 1;
+    }
 }
 
 .carousel-caption .btn {
