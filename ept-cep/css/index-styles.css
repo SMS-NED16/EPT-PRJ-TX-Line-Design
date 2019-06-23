@@ -1,3 +1,36 @@
-.carousel-inner img {
-	margin: auto;
+/*Importing Lato from Google Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+body {
+	font-family: Lato;
+}
+
+.carousel-item img {
+	height: 92vh;
+	opacity: 0.85;
+	display: flex;
+ }
+
+.carousel-caption {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	color: #ecf0f1;
+	height: 90vh;
+}
+
+/*Media query to redefine lead class font sizes*/
+@media (max-width: 800px) {
+    .display-3 {
+        font-size: 2.25rem;
+        font-weight: 300;
+        line-height: 1.0;
+    }
+
+    .display-4 {
+        font-size: 1.75rem;
+        font-weight: 300;
+        line-height: 1.0;
+    }
 }
