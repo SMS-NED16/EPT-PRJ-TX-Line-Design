@@ -38,7 +38,7 @@
 	      <a class="nav-item nav-link mx-auto" href="../about.html">About</a>
 	      <a class="nav-item nav-link mx-auto" href="../team.html">Team</a>
 	      <a class="nav-item nav-link mx-auto" href="../faqs.html">FAQs</a>
-	      <a class="nav-item nav-link mx-auto active" href="./design.html">Design!</a>
+	      <a class="nav-item nav-link mx-auto active" href="../design.html">Design!</a>
 	    </div>
 	  </div>
 	</nav>
@@ -117,24 +117,24 @@
 
 	<!-------------------------MODAL FOR DISPLAYING RESULTS------------>
 	<div class="modal fade" id="resultsModal" tabindex="-1" role="dialog">
-	  <div class="modal-dialog modal-dialog-centered" role="document">
+	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <h5 class="modal-title" id="modalTitle">Transmission Line Design Results</h5>
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	          <span aria-hidden="true">&times;</span>
+	        <button type="button" class="close" data-dismiss="modal">
 	        </button>
 	      </div>
 	      <div class="modal-body">
-	      	<h1 id="geomName">TX Line Name</h1>
-	      	<img class="img img-thumbnail" src="../../assets/design-img/tower-1.jpg">
-	      	<div id="modalParams">
-	      		
-	      	</div>
+	      	<div id="geomName" class="d-flex justify-content-center"></div>
+	      	<div class="d-flex justify-content-center">
+	      		<img class="img img-thumbnail" src="../../assets/design-img/tower-1.jpg">
+	      	</div>	      	
+	      	<!-- UPDATED DYNAMICALLY ON CLICK -->
+	      	<div id="geomParams" class="container"></div>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-	        <button type="button" class="btn btn-primary">Save changes</button>
+	        <a href="../design.html"><button type="button" class="btn btn-primary">Choose Another Design</button></a>
 	      </div>
 	    </div>
 	  </div>
