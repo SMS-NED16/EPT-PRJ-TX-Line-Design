@@ -52,32 +52,45 @@ export default function geom_1_calcs(user_input) {
 	console.log("Capacitance in Farads is " + capacitance);
 
 	// SURGE IMPEDANCE LOADING
-	let surge_impedance = Math.pow(inductance / capacitance, 0.5);
-	let surge_impedance_loading = (Math.pow(110 * Math.pow(10, 3), 2) / surge_impedance) / Math.pow(10, 6);
-	console.log("Surge Impedance is ", surge_impedance);
-	console.log("Surge Impedance Loading is ", surge_impedance_loading);
+	let SI = Math.pow( (inductance / capacitance), 0.5 );
+	let SIL = (Math.pow(110 * Math.pow(10, 3), 2) / SI) / Math.pow(10, 6);
+	console.log("Surge Impedance is ", SI);
+	console.log("Surge Impedance Loading is ", SIL);
 
-	//	RESISTIVE LOSSES
-	let r_loss = 1 - (Math.exp((-0.07191 * line_params.inputs.length)) / 
-		(1.121 * Math.pow(10, -6) * 3 * Math.pow(10, 8)));
-	console.log("Resistive Losses are ", r_loss)
+	// RESISTIVE LOSSES
+	let line_length = user_input.length;
+	let r_per_meter = user_input.conductor.R;
+	let r_loss_const = 3 * Math.pow(10, 8);
+	let r_loss = 1 - (Math.exp((-1 * line_length * r_per_meter) /(inductance * r_loss_const))); 
+	console.log("Resistive Losses are", r_loss);
 
-	// // CORONA LOSSES
-	// air_density_factor = getADF(line_params.inputs.temp, line_params.inputs.pressure);
+	// CORONA LOSSES
+	let temperature = user_input.temp;
+	let pressure = user_input.pressure;
+	console.log(typeof(temperature));
+	console.log(typeof(pressure));
+	console.log( 0.392 * pressure / (temperature + 273));
+	// let air_density_factor = getADF(user_input.temp, user_input.pressure);
+	// console.log("Air density factor is ", air_density_factor);
 
-	// // Disruptive Critical Voltage
-	// e_0 = 21.1 * 0.85 * (input_data.conductor.radius * 100) * air_density_factor * Math.log(geom_mean_dist/input_data.conductor.radius);
+	// // DISRUPTIVE CRITICAL VOLTAGE
+	// let E_0 = 21.1 * 0.85 * (user_input.radius * 100) * air_density_factor * Math.log(geom_mean_dist/user_input.radius);
+	// console.log("Disruptive Critical Voltage", E_0);
 
-	// // Corona Power Loesses
-	// p_corona = (242.4 / air_density_factor) * (input_data.freq + 25) * 
-	// ((input_data.conductor.radius/geom_mean_dist)) * Math.pow(10, -5);
+	// // CORONA POWER LOSSES
+	// let p_corona = (242.4 / air_density_factor) * (user_input.frequency) * 
+	// (110 - E_0) * (110 - E_0) * Math.pow((110 - E_0), 2) * 
+	// (Math.pow(user_input.radius/geom_mean_dist), 0.5 ) * Math.pow(10, -5);
+	// console.log("Coronal losse are" + p_corona);
 
 	// Results Object
 	line_params.results = {
 		line_inductance: inductance, 
 		line_capacitance: capacitance,
-		sil: surge_impedance_loading, 
+		sil: SIL, 
 		r_loss: r_loss,
+		E_0: E_0, 
+		p_corona: p_corona,
 	};
 
 	return line_params;
