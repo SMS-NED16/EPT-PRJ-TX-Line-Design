@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>EPT CEP - About</title>
+	<title>EPT CEP - Design</title>
 	
 	<!-- Meta tag for character encoding and preventing user zoom-->
 	<meta charset="utf-8">
@@ -22,3 +22,122 @@
 	<!-- Font Awesome CDN -->
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
+<body>
+	<!----------------------------------NAVBAR---------------------------------------->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	  <a class="navbar-brand" href="home.html">EPT CEP - TX Line Design</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" >
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+	    <div class="navbar-nav ml-auto">
+	      <a class="nav-item nav-link mx-auto" href="./home.html">Home<span class="sr-only">(current)</span></a>
+	      <a class="nav-item nav-link mx-auto" href="./about.html">About</a>
+	      <a class="nav-item nav-link mx-auto" href="./team.html">Team</a>
+	      <a class="nav-item nav-link mx-auto" href="./faqs.html">FAQs</a>
+	      <a class="nav-item nav-link mx-auto active" href="./design.html">Design!</a>
+	    </div>
+	  </div>
+	</nav>
+
+	<!----------------------------------JUMBOTRON-------------------------------------->
+	<div class="jumbotron jumbotron-fluid">
+  		<div class="container">
+    		<h1 class="display-3">Design - Choose Geometry</h1>
+    		<p class="lead">Choose a transmission line tower and conductor geometry.</p>
+  		</div>
+	</div>
+
+	<div class="container">
+		<div class="row mb-4">
+			<div class="geom-img col-sm-6 col-md-4" 
+				data-toggle="tooltip" data-placement="top" 
+				title="110kV Single Circuit, Single Conductor">
+				<img class="img-thumbnail" src="../assets/design-img/tower-1.jpg">
+				<div class="img-overlay">110kV Single Circuit, Single Conductor</div>
+			</div>
+
+			<div class="geom-img col-sm-6 col-md-4" 
+				data-toggle="tooltip" data-placement="top" 
+				title="132kV Double Circuit, Single Conductor">
+				<img class="img-thumbnail" src="../assets/design-img/tower-2.jpg">
+				<div class="img-overlay">132kV Single Circuit, Single Conductor</div>
+
+			</div>
+
+			<div class="geom-img col-sm-6 col-md-4  mx-auto"
+				data-toggle="tooltip" data-placement="top" 
+				title="115kV Single Circuit Bundled Ground Wire">
+				<img class="img-thumbnail" src="../assets/design-img/tower-3.jpeg">
+				<div class="img-overlay">115kV Single Circuit, Bundled Ground Wire</div>
+			</div>
+		</div>
+
+		<div class="row mb-4">
+			<div class="geom-img col-sm-6 col-md-4"
+				data-toggle="tooltip" data-placement="top" 
+				title="132kV Double Circuit, Two-Bundle Conductor">
+				<img class="img-thumbnail" src="../assets/design-img/tower-4.jpg">
+				<div class="img-overlay">132 kV Double Circuit, 2 Conductors</div>
+			</div>
+
+			<div class="geom-img col-sm-6 col-md-4"
+				data-toggle="tooltip" data-placement="top" 
+				title="400kV Single Circuit, Four-Bundle Conductor">
+				<img class="img-thumbnail" src="../assets/design-img/tower-5.jpeg">
+				<div class="img-overlay">400 kV, Single Circuit, 4 Conductors</div>
+			</div>
+
+			<div class="geom-img col-sm-6 col-md-4  mx-auto"
+				data-toggle="tooltip" data-placement="top" 
+				title="400kV Double Circuit, Four-Bundle Conductor">
+				<img class="img-thumbnail" src="../assets/design-img/tower-6.jpg">
+				<div class="img-overlay">400 kV, Double Circuit, 4 Conductors</div>
+			</div>
+		</div>
+
+		<div class="row mb-4">
+			<div class="geom-img col-sm-6 col-md-4"
+				data-toggle="tooltip" data-placement="top" 
+				title="220kV Double Circuit, Single Conductor">
+				<img class="img-thumbnail" src="../assets/design-img/tower-7.jpg">
+				<div class="img-overlay">220 kV, Double Circuit, 1 Conductor</div>
+			</div>
+
+			<div class="geom-img col-sm-6 col-md-4"
+				data-toggle="tooltip" data-placement="top" 
+				title="380kV Single Circuit, Two-Bundle Conductor">
+				<img class="img-thumbnail" src="../assets/design-img/tower-8.jpg">
+				<div class="img-overlay">380 kV, Single Circuit, 2 Conductors</div>
+			</div>
+
+			<div class="geom-img col-sm-6 col-md-4"
+				data-toggle="tooltip" data-placement="top" 
+				title="380kV Double Circuit, Three-Bundle Conductor">
+				<img class="img-thumbnail" src="../assets/design-img/tower-9.jpg">
+				<div class="img-overlay">380 kV, Double Circuit, 3 Conductors</div>
+			</div>
+		</div>
+
+		<div class="row mb-4">
+			<div class="geom-img col-md-4  mx-auto"
+				data-toggle="tooltip" data-placement="top" 
+				title="500kV Single Circuit, Three-Bundle Conductor">
+				<img class="img-thumbnail" src="../assets/design-img/tower-10.jpg">
+				<div class="img-overlay">500 kV, Single Circuit, 3 Conductors</div>
+			</div>
+		</div>
+	</div>
+	<!-------------------------------------FOOTER-------------------------------------->
+	<footer class="bg-dark pt-2 px-2">
+		<p>EE-163, EE-164, EE-084, & EE-168</p>
+		<p>Section D, TE-EE 2016-2017</p>
+		<p>Submitted to Dr. Umbrin Sultana</p>
+	</footer>
+</body>
+<script type="text/javascript">
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+	})
+</script>
+</html>

@@ -1,0 +1,57 @@
+/*Importing Lato from Google Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+/*Font will be Lato for the entire website*/
+body {
+	font-family: Lato;
+	background-color: #ecf0f1;
+}
+
+/*Jumbotron Styles*/
+.jumbotron {
+	background: #2980B9;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/*FOOTER STYLES*/
+footer {
+    color: #FFF; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    align-items: center;
+}
+
+.geom-img {
+  position: relative;
+  display: inline-block;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  transition: all;
+  transition-delay: 0.1s;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.25s;
+  opacity: 0.65;
+}
+
+.geom-img:hover {
+	transform: scale(1.1);
+  	-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  	filter: grayscale(0%);
+  	opacity: 1;
+}
+
+.img-overlay {
+  position: absolute;
+  height: 30%;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  font-size: 18px;
+}
