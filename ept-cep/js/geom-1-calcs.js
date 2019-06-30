@@ -65,23 +65,18 @@ export default function geom_1_calcs(user_input) {
 	console.log("Resistive Losses are", r_loss);
 
 	// CORONA LOSSES
-	let temperature = user_input.temp;
-	let pressure = user_input.pressure;
-	console.log(typeof(temperature));
-	console.log(typeof(pressure));
-	console.log( 0.392 * pressure / (temperature + 273));
-	// let air_density_factor = getADF(user_input.temp, user_input.pressure);
-	// console.log("Air density factor is ", air_density_factor);
+	let air_density_factor = getADF(user_input.temp, user_input.pressure);
+	console.log("Air density factor is ", air_density_factor);
 
-	// // DISRUPTIVE CRITICAL VOLTAGE
-	// let E_0 = 21.1 * 0.85 * (user_input.radius * 100) * air_density_factor * Math.log(geom_mean_dist/user_input.radius);
-	// console.log("Disruptive Critical Voltage", E_0);
+	// DISRUPTIVE CRITICAL VOLTAGE
+	let radius = user_input.conductor.radius;
+	let E_0 = 21.1 * 0.85 * radius * 100 * air_density_factor * Math.log(geom_mean_dist/radius);
+	console.log("Disruptive Critical Voltage", E_0);
 
-	// // CORONA POWER LOSSES
-	// let p_corona = (242.4 / air_density_factor) * (user_input.frequency) * 
-	// (110 - E_0) * (110 - E_0) * Math.pow((110 - E_0), 2) * 
-	// (Math.pow(user_input.radius/geom_mean_dist), 0.5 ) * Math.pow(10, -5);
-	// console.log("Coronal losse are" + p_corona);
+	// CORONA POWER LOSSES
+	let p_corona = (242.4 / air_density_factor) * (user_input.frequency + 25) * 
+	Math.pow(110 - E_0, 2) * Math.pow(radius/geom_mean_dist, 0.5) * Math.pow(10, -5);
+	console.log("Coronal Power Losses are", p_corona);
 
 	// Results Object
 	line_params.results = {
