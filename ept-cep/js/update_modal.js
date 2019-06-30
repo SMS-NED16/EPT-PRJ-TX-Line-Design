@@ -20,9 +20,9 @@ export default function updateModal(modalData) {
 		+ "</ul>"
 		+ "<h3>Physical Parameters</h3>"
 		+ "<ul>"
-		+	"<li><b>Length (km)</b>:\t\t" + inputs.length + "</li>"
-		+	"<li><b>Temperature (kV)</b>:\t\t" + inputs.temperature + "</li>"
-		+	"<li><b>Pressure (kV)</b>:\t\t" + inputs.pressure + "</li>"
+		+	"<li><b>Length (m)</b>:\t\t" + inputs.length + "</li>"
+		+	"<li><b>Temperature (&#x2103;)</b>:\t\t" + inputs.temp + "</li>"
+		+	"<li><b>Pressure (mm Hg)</b>:\t\t" + inputs.pressure + "</li>"
 		+ "</ul>"
 
 
@@ -41,12 +41,12 @@ export default function updateModal(modalData) {
 		// Calculation Results in a separate section
 		+ "<h2>Calculated Parameters</h2>"
 		+ "<ul>"
-		+	"<li><b>Inductance per Meter</b>:\t\t" + results.line_inductance + "</li>"
-		+	"<li><b>Capacitance per Meter</b>:\t\t" + results.line_capacitance + "</li>"
-		+	"<li><b>Total Resistive Losses (kW)</b>:\t\t" + results.r_loss + "</li>"
-		// +	"<li><b>Estimated Corona Losses (kW)</b>:" + results."</li>"
-		// +	"<li><b>Disruptive Critical Voltage (kV)</b>:" + "</li>"
-		+	"<li><b>Surge Impedance Loading (kV)</b>:\t\t" + results.sil + "</li>"
+		+	"<li><b>Inductance (Henries per Meter)</b>:\t\t" + results.line_inductance + "</li>"
+		+	"<li><b>Capacitance (Farads per Meter)</b>:\t\t" + results.line_capacitance + "</li>"
+		+	"<li><b>Resistive Losses (% of Total Power Losses)</b>:\t\t" + results.r_loss + "</li>"
+		+   "<li><b>Estimated Corona Losses (kW/km/phase)</b>:" + results.p_corona + "</li>"
+		+ 	"<li><b>Disruptive Critical Voltage (kV)</b>:" + results.E_0 + "</li>"
+		+	"<li><b>Surge Impedance Loading (MW)</b>:\t\t" + results.sil + "</li>"
 		+ "</ul>"
 	"</div>";
 
