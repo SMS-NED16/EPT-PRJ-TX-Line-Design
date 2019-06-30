@@ -11,7 +11,6 @@ import updateModal from "./update_modal.js";
 // Creates an object to store data entered by the user
 let user_input = {};
 	$("#submit-btn").click(function() {
-		alert("Button clicked");
 		// Get the values of the inputs
  		user_input = {
  			geom_description: $("#geometryDescription")[0].value,
