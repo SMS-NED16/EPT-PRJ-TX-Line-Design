@@ -93,5 +93,4 @@ export default function geom_4_calcs(user_input) {
 	}
 
 	return line_params;
-	console.log(line_params);
 }

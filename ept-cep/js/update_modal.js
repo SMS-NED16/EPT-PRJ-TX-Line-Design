@@ -1,6 +1,4 @@
 export default function updateModal(modalData) {
-	console.log("Hello from the modal");
-	console.log(modalData);
 	$("#geomName").html("<h2>" + 
 		modalData.inputs.geom_description + "</h2>");
 
