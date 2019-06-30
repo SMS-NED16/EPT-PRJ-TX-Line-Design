@@ -5,6 +5,7 @@
 
 // function to find RLC/radius values of ACSR conductors by name
 import geom_1_calcs from "./geom-1-calcs.js";
+import updateModal from "./update_modal.js";
 
 // GETTING USER INPUT
 // Creates an object to store data entered by the user
@@ -22,6 +23,9 @@ let user_input = {};
  			length: $("#length")[0].value,
 		};
 
-		// Pass this data to the calculations
-		geom_1_calcs(user_input);
+		// Calculate parameters to obtain full set of results
+		let results = geom_1_calcs(user_input);
+		
+		// Use this data to update the modal
+		updateModal(results);
 });

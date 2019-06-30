@@ -5,9 +5,9 @@
 import acsr_db from "./conductor_db.js";
 
 export default function conductorLookup(conductor_code) {
-	if (conductor_code in acsr_db) {
+	if (conductor_code.toLowerCase() in acsr_db) {
 		console.log('Conductor Found');
-		return acsr_db[conductor_code];
+		return acsr_db[conductor_code.toLowerCase()];
 	} else {
 		console.log('Default Conductor');
 		return acsr_db['drake'];
