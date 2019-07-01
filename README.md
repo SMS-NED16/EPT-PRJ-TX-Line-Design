@@ -10,10 +10,11 @@ Built as an end-of-semester Complex Engineering Problem-based project for the EE
 | EE-16163    | Saad Siddiqui | Web frontend, JS programming, research, report     |
 | EE-16164    | Faiq Siddiqui | MATLAB prototyping, research, report     |
 | EE-16168    | Rehman Gul    | Research, report      |
-| EE-16084    | Aymen Amir    | Research      |
+| EE-16084    | Aymen Amir    | Research, report      |
 
 TE-EE 16-17 Section D, Spring 2019
---
+------
+
 ## Workflow
 ### Inputs - Presets
 The app first rovides the user the option to select one of 10 practical power transmission (TX) line geometries with the following **preset parameters**
@@ -61,10 +62,11 @@ Line inducatance and capacitance are not simply the conductor's per unit length 
 ## Electrical Stuff
 - Add more geometries for the user to choose from. 
 - Allow the user to specify a load and calculate the line current. This may also lead to a more accurate estimate of the resistive losses. 
-- 
+- Add more ACSR conductors for the user to choose from.
+- Could also add a report generator that downloads the JS object with presets, inputs, and calculated parameters as a simple `JSON` tree (or equivalent format).
 
 ## JS and OOP
-- Implement stronger JS OOP principles. OOP is used sparingly in this application (with the exception of the [`Conductor` class](./ept-cep/js/conductor_db.js)). 
+- Implement stronger JS OOP principles. OOP is used sparingly in this application (with the exception of the [`ACSRConductor` class](./ept-cep/js/ACSRConductor.js)). 
 - For instance, a class can be defined for `TX_Line` that is extended by subclasses for lines with bundled or unbundled conductors, or single, double, multiple circuits, etc.
 - Common functions such as [`getResistiveLosses()`](./ept-cep/js/getResistiveLosses.js), [`getSIL`](./ept-cep/js/getSIL.js) can be added to the `prototype` of the `TX_Line` class for inheritance.
 
