@@ -19,6 +19,7 @@ export default function geom_2_calcs(user_input) {
 			}
 		}, 
 		"volts": 132,
+		"conductors_per_bundle": 1,
 	};
 
 	// DEFINING ELECTRICAL CONSTANTS FOR THIS GEOMETRY

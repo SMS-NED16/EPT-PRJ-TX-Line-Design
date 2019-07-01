@@ -19,6 +19,7 @@ export default function geom_5_calcs(user_input) {
 			}
 		}, 
 		"volts": 400,
+		"conductors_per_bundle": 4,
 	};
 
 	// Adding all constants to line_params objct

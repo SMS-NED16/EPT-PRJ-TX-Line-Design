@@ -24,6 +24,7 @@ export default function geom_3_calcs(user_input) {
 			}
 		}, 
 		"volts": 115,
+		"conductors_per_bundle": 1,
 	};
 
 

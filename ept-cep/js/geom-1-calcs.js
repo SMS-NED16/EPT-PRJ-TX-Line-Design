@@ -12,6 +12,7 @@ export default function geom_1_calcs(user_input) {
 			"d3" : 0.57, 
 			"volts": 110,
 		},
+		"conductors_per_bundle": 1,
 	}
 
 	// Permeability of Free Space
