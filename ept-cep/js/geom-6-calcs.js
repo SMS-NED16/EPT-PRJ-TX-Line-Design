@@ -101,6 +101,7 @@ export default function geom_6_calcs(user_input) {
 		adf, Deq);
 
 	// CORONAL LOSSES
+	// TODO: add parameter for power factor and change to 0.9
 	let p_corona = getCoronalLoss(adf, line_params.inputs.frequency, 
 	line_params.consts.volts, E_0,
 	line_params.inputs.conductor.radius, Deq);
