@@ -32,12 +32,12 @@ export default function updateModal(modalData) {
 		+	"<li>Inductance (H):\t\t" + inputs.conductor.L + "</li>"
 		+	"<li>Capacitance (F):\t\t " + inputs.conductor.C + "</li>"
 		+	"<li>Radius (m):\t\t" + inputs.conductor.radius + "</li>"
-		+	"<li>Count per bundle (if applicable):\t\t" + 1 + "</li>"
+		+	"<li>Conductors per bundle (if applicable):\t\t" + consts.conductors_per_bundle + "</li>"
 		+ "</ul>"
 		
 
 		// Calculation Results in a separate section
-		+ "<h2>Calculated Parameters</h2>"
+		+ "<h3>Calculated Parameters</h3>"
 		+ "<ul>"
 		+	"<li><b>Inductance (Henries per Meter)</b>:\t\t" + results.line_inductance + "</li>"
 		+	"<li><b>Capacitance (Farads per Meter)</b>:\t\t" + results.line_capacitance + "</li>"
