@@ -5,15 +5,13 @@ Built as an end-of-semester Complex Engineering Problem-based project for the EE
 
 
 ## Group
+TE-EE 16-17 Section D, Spring 2019
 | Roll Number | Name          | Roles |
 |-------------|---------------|-------|
 | EE-16163    | Saad Siddiqui | Web frontend, JS programming, research, report     |
 | EE-16164    | Faiq Siddiqui | MATLAB prototyping, research, report     |
 | EE-16168    | Rehman Gul    | Research, report      |
 | EE-16084    | Aymen Amir    | Research, report      |
-
-TE-EE 16-17 Section D, Spring 2019
-------
 
 ## Workflow
 ### Inputs - Presets
@@ -59,17 +57,17 @@ Line inducatance and capacitance are not simply the conductor's per unit length 
 -----
 
 ## Improvements
-## Electrical Stuff
+### Electrical Stuff
 - Add more geometries for the user to choose from. 
 - Allow the user to specify a load and calculate the line current. This may also lead to a more accurate estimate of the resistive losses. 
 - Add more ACSR conductors for the user to choose from.
 - Could also add a report generator that downloads the JS object with presets, inputs, and calculated parameters as a simple `JSON` tree (or equivalent format).
 
-## JS and OOP
+### JS and OOP
 - Implement stronger JS OOP principles. OOP is used sparingly in this application (with the exception of the [`ACSRConductor` class](./ept-cep/js/ACSRConductor.js)). 
 - For instance, a class can be defined for `TX_Line` that is extended by subclasses for lines with bundled or unbundled conductors, or single, double, multiple circuits, etc.
 - Common functions such as [`getResistiveLosses()`](./ept-cep/js/getResistiveLosses.js), [`getSIL`](./ept-cep/js/getSIL.js) can be added to the `prototype` of the `TX_Line` class for inheritance.
 
-## BuiLding a Backend
+### BuiLding a Backend
 - Could use MongoDB to store names, descriptions, conductor spacing, voltages, and other preset parameters.
 - Could also use Express with EJS to dynamically generate transmission line geometry forms with a single HTML file (as opposed to a separate form page for each file).
