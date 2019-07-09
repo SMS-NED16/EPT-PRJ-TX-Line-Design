@@ -70,6 +70,6 @@ Line inducatance and capacitance are not simply the conductor's per unit length 
 - For instance, a class can be defined for `TX_Line` that is extended by subclasses for lines with bundled or unbundled conductors, or single, double, multiple circuits, etc.
 - Common functions such as [`getResistiveLosses()`](./ept-cep/js/getResistiveLosses.js), [`getSIL`](./ept-cep/js/getSIL.js) can be added to the `prototype` of the `TX_Line` class for inheritance.
 
-### BuiLding a Backend
+### Building a Backend
 - Could use MongoDB to store names, descriptions, conductor spacing, voltages, and other preset parameters.
 - Could also use Express with EJS to dynamically generate transmission line geometry forms with a single HTML file (as opposed to a separate form page for each file).
