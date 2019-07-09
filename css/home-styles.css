@@ -1,0 +1,66 @@
+/*Importing Lato from Google Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+/*Font will be Lato for the entire website*/
+body {
+	font-family: Lato;
+}
+
+/*CAROUSEL STYLES*/
+.carousel-item img {
+	height: 85vh;
+	display: flex;
+    opacity: 0.5;
+ }
+
+.carousel-caption {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #000;
+	height: 90vh;           
+
+    /*Displacing from top to animate rise and fade in later*/   
+    position: absolute;     
+    top: 2em;
+    opacity: 0;
+
+    animation: fadeIn 1s 0.5s forwards;
+}
+
+.carousel-caption .btn {
+    padding: 1.2rem;
+    font-size: 1.2rem;
+}
+
+.carousel-caption .btn a {
+    color: #ecfff1;
+    text-decoration: none;          /*link should not be underlined*/
+}
+
+/*Animation to fade in carousel text from bottom */
+@keyframes fadeIn {
+    100% {
+        top: -2em;
+        opacity: 1;
+    }
+}
+
+/*Media query to redefine lead class font sizes for carousel*/
+@media (max-width: 800px) {
+    .display-3 {
+        font-size: 2.25rem;
+        font-weight: 300;
+        line-height: 1.0;
+    }
+}
+
+/*FOOTER STYLES*/
+footer {
+    color: #FFF; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    align-items: center;
+}

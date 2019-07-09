@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EPT CEP - Design</title>
+	
+	<!-- Meta tag for character encoding and preventing user zoom-->
+	<meta charset="utf-8">
+	<meta name="viewport" content= "width=device-width, user-scalable=no">
+
+	<!-------------------------------------- Bootstrap CDN ---------------------------------------------->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!-- jQuery, Popper.js, and custom Bootstrap.js -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<!-- Custom CSS  -->
+	<link rel="stylesheet" type="text/css" href="./css/design-styles.css">
+
+	<!-- Font Awesome CDN -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+	<!----------------------------------NAVBAR---------------------------------------->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	  <a class="navbar-brand" href="index.html">EPT CEP - TX Line Design</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" >
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+	    <div class="navbar-nav ml-auto">
+	      <a class="nav-item nav-link mx-auto" href="./index.html">Home<span class="sr-only">(current)</span></a>
+	      <a class="nav-item nav-link mx-auto" href="./about.html">About</a>
+	      <a class="nav-item nav-link mx-auto" href="./team.html">Team</a>
+	      <a class="nav-item nav-link mx-auto active" href="./design.html">Design!</a>
+	    </div>
+	  </div>
+	</nav>
+
+	<!----------------------------------JUMBOTRON-------------------------------------->
+	<div class="jumbotron jumbotron-fluid">
+  		<div class="container">
+    		<h1 class="display-3">Design - Choose Geometry</h1>
+    		<p class="lead">Choose a transmission line tower and conductor geometry.</p>
+  		</div>
+	</div>
+
+	<div class="container">
+		<div class="row mb-4">
+			<div class="geom-img col-sm-6 col-md-4" 
+			data-toggle="tooltip" data-placement="top" title="110kV Single Circuit, Single Conductor">
+				<a href="./geoms/geom-1.html">
+					<img class="img-thumbnail" src="./assets/design-img/tower-1.jpg">
+					<div class="img-overlay">110kV Single Circuit, Single Conductor</div>
+				</a>
+			</div>
+
+			<div class="geom-img col-sm-6 col-md-4" 
+				data-toggle="tooltip" data-placement="top" 
+				title="132kV Double Circuit, Single Conductor">
+				<a href="./geoms/geom-2.html">
+					<img class="img-thumbnail" src="./assets/design-img/tower-2.jpg">
+					<div class="img-overlay">132kV Single Circuit, Single Conductor</div>
+				</a>
+			</div>
+
+			<div class="geom-img col-sm-6 col-md-4  mx-auto"
+				data-toggle="tooltip" data-placement="top" 
+				title="115kV Single Circuit Bundled Ground Wire">
+				<a href="./geoms/geom-3.html" class="mx-auto">
+					<img class="img-thumbnail" src="./assets/design-img/tower-3.jpeg">
+					<div class="img-overlay">115kV Single Circuit<br>Bundled Ground Wire</div>
+				</a>
+			</div>
+		</div>
+
+		<div class="row mb-4">
+			<div class="geom-img col-sm-6 col-md-4"
+				data-toggle="tooltip" data-placement="top" 
+				title="132kV Double Circuit, Two-Bundle Conductor">
+				<a href="./geoms/geom-4.html">		
+					<img class="img-thumbnail" src="./assets/design-img/tower-4.jpg">
+					<div class="img-overlay">132 kV Double Circuit, 2 Conductors</div>
+				</a>
+			</div>
+
+			<div class="geom-img col-sm-6 col-md-4"
+				data-toggle="tooltip" data-placement="top" 
+				title="400kV Single Circuit, Four-Bundle Conductor">
+				<a href="./geoms/geom-5.html">
+					<img class="img-thumbnail" src="./assets/design-img/tower-5.jpeg">
+					<div class="img-overlay">400 kV, Single Circuit, 4 Conductors</div>
+				</a>
+			</div>
+
+			<div class="geom-img col-sm-6 col-md-4  mx-auto"
+				data-toggle="tooltip" data-placement="top" 
+				title="400kV Double Circuit, Four-Bundle Conductor">
+				<a href="./geoms/geom-6.html">
+					<img class="img-thumbnail" src="./assets/design-img/tower-6.jpg">
+					<div class="img-overlay">400 kV, Double Circuit, 4 Conductors</div>
+				</a>
+			</div>
+		</div>
+
+		<div class="row mb-4">
+			<div class="geom-img col-sm-6 col-md-4"
+				data-toggle="tooltip" data-placement="top" 
+				title="220kV Double Circuit, Single Conductor">
+				<a href="./geoms/geom-7.html">
+					<img class="img-thumbnail" src="./assets/design-img/tower-7.jpg">
+					<div class="img-overlay">220 kV, Double Circuit, 1 Conductor</div>
+				</a>
+			</div>
+
+			<div class="geom-img col-sm-6 col-md-4"
+				data-toggle="tooltip" data-placement="top" 
+				title="380kV Single Circuit, Two-Bundle Conductor">
+				<a href="./geoms/geom-8.html">
+					<img class="img-thumbnail" src="./assets/design-img/tower-8.jpg">
+					<div class="img-overlay">380 kV, Single Circuit, 2 Conductors</div>
+				</a>
+			</div>
+
+			<div class="geom-img col-sm-6 col-md-4 mx-auto"
+				data-toggle="tooltip" data-placement="top" 
+				title="380kV Double Circuit, Three-Bundle Conductor">
+				<a href="./geoms/geom-9.html">
+					<img class="img-thumbnail" src="./assets/design-img/tower-9.jpg">
+					<div class="img-overlay">380 kV, Double Circuit, 3 Conductors</div>
+				</a>
+			</div>
+		</div>
+
+		<div class="row sm-4">
+			<div class="geom-img col-sm-4  mx-auto"
+				data-toggle="tooltip" data-placement="top" 
+				title="500kV Single Circuit, Three-Bundle Conductor">
+				<a href="./geoms/geom-10.html">
+					<img class="img-thumbnail" src="./assets/design-img/tower-10.jpg">
+					<div class="img-overlay">500 kV, Single Circuit, 3 Conductors</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-------------------------------------FOOTER-------------------------------------->
+	<footer class="bg-dark pt-2 px-2">
+		<p>EE-163, EE-164, EE-084, & EE-168</p>
+		<p>Section D, TE-EE 2016-2017</p>
+		<p>Submitted to Dr. Umbrin Sultana</p>
+	</footer>
+</body>
+<script type="text/javascript">
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+	})
+</script>
+</html>
