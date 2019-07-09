@@ -3,7 +3,7 @@
 
 Built as an end-of-semester Complex Engineering Problem-based project for the EE-352 Electrical Power Transmission course as part of BE-Electrical Engineering at NEDUET.
 
-# Click [here](./index.html) to view the project.
+## Click [here](https://sms-ned16.github.io/EPT-PRJ-TX-Line-Design/) to view the project.
 
 ## Group
 TE-EE 16-17 Section D, Spring 2019
